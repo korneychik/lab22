@@ -1,0 +1,44 @@
+p.clip {
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+}
+.workers p.clip {
+    max-width: 150px;
+}
+thead tr td {
+    font-weight: bold;
+}
+tr {
+    background-color: white;
+}
+td{
+    text-align: center;
+}
+h1 {
+/*    margin-left: 30px;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h3 {
+    margin-top: 0px;
+}
+.workers {
+    height: 240px;
+    overflow-y: auto;
+}
+.tasks {
+    height: 245px;
+    overflow-y: auto;
+}
+#workerId {
+    width: 200px;
+}
+#lastPing {
+    width: 140px;
+}
+.pic{
+    width:200px;
+}

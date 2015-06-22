@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Адмінка</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/lab2/res/css/bootstrap.css" />
+    <link rel="stylesheet" href="/lab2/res/css/admin.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-xs-12 text-center">
+            <h1>Адмінка</h1>
+        </div>
+        <div class="col-xs-8">
+            <h3 class="text-center">Воркери</h3>
+            <div class=" workers">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="info">
+                            <td id="workerId">Воркер</td>
+                            <td>Задание</td>
+                            <td>Кусочек</td>
+                            <td id="lastPing">Пинг</td>
+                        </tr>
+                    </thead>
+                    <tbody id="workers">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <img class="pic" src="/lab2/res/img/integral.gif" alt="Емммм..." />
+        </div>
+        <div class="col-xs-12" style="margin-top: -40px;">
+            <h3 class="text-center">Задачи</h3>
+            <div class="tasks">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="info">
+                            <td>Задание</td>
+                            <td>Интервали</td>
+                            <td>Результат</td>
+                            <td>Время</td>
+                            <td>Прогрес</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/lab2/res/js/admin.js"></script>
+</body>
+
+</html>

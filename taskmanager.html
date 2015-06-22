@@ -1,0 +1,163 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module taskmanager</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>taskmanager</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/max/PycharmProjects/lab22/taskmanager.py">/home/max/PycharmProjects/lab22/taskmanager.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;coding=utf-8</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="uuid.html">uuid</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="taskmanager.html#Chunk">Chunk</a>
+</font></dt><dt><font face="helvetica, arial"><a href="taskmanager.html#Task">Task</a>
+</font></dt><dt><font face="helvetica, arial"><a href="taskmanager.html#Worker">Worker</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Chunk">class <strong>Chunk</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Класс&nbsp;Кусочек&nbsp;является&nbsp;отраженим&nbsp;небольшой&nbsp;части&nbsp;большого&nbsp;задания.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Chunk-__init__"><strong>__init__</strong></a>(self, interval)</dt></dl>
+
+<dl><dt><a name="Chunk-getChunkId"><strong>getChunkId</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;ID&nbsp;кусочка</tt></dd></dl>
+
+<dl><dt><a name="Chunk-getInterval"><strong>getInterval</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;интервал&nbsp;вычисления</tt></dd></dl>
+
+<dl><dt><a name="Chunk-getJson"><strong>getJson</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;JSON&nbsp;представление&nbsp;кусочка</tt></dd></dl>
+
+<dl><dt><a name="Chunk-getResult"><strong>getResult</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;результат&nbsp;вычисления&nbsp;кусочка</tt></dd></dl>
+
+<dl><dt><a name="Chunk-isComplete"><strong>isComplete</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;True&nbsp;если&nbsp;кусочек&nbsp;вычислен</tt></dd></dl>
+
+<dl><dt><a name="Chunk-isInProgress"><strong>isInProgress</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;True&nbsp;если&nbsp;кусочек&nbsp;в&nbsp;процессе&nbsp;вычисления</tt></dd></dl>
+
+<dl><dt><a name="Chunk-setComplete"><strong>setComplete</strong></a>(self, complete)</dt><dd><tt>Устанавливает&nbsp;состояние&nbsp;законченности&nbsp;вычисления&nbsp;(законченно&nbsp;или&nbsp;нет)</tt></dd></dl>
+
+<dl><dt><a name="Chunk-setInProgress"><strong>setInProgress</strong></a>(self, inProgress)</dt><dd><tt>Устанавливает&nbsp;состояние&nbsp;вычисления&nbsp;(в&nbsp;процессе&nbsp;или&nbsp;нет)</tt></dd></dl>
+
+<dl><dt><a name="Chunk-setResult"><strong>setResult</strong></a>(self, result)</dt><dd><tt>Устанавливает&nbsp;результат&nbsp;вычисления&nbsp;кусочка</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Task">class <strong>Task</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Класс&nbsp;Задание&nbsp;является&nbsp;отражением&nbsp;реального&nbsp;задания.<br>
+Класс&nbsp;содержит&nbsp;в&nbsp;себе&nbsp;информацию&nbsp;про&nbsp;свою&nbsp;законченность,&nbsp;состояние&nbsp;каждого&nbsp;кусочка,&nbsp;методы&nbsp;для&nbsp;удобной&nbsp;работы.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Task-__init__"><strong>__init__</strong></a>(self, intervals)</dt></dl>
+
+<dl><dt><a name="Task-equal"><strong>equal</strong></a>(self, intervals)</dt><dd><tt>Возврашает&nbsp;True&nbsp;если&nbsp;интервалы&nbsp;этого&nbsp;задания&nbsp;совпадают&nbsp;с&nbsp;аргументом</tt></dd></dl>
+
+<dl><dt><a name="Task-getAnyChunk"><strong>getAnyChunk</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;первый&nbsp;кусочек&nbsp;готовый&nbsp;к&nbsp;вычислению&nbsp;на&nbsp;воркере</tt></dd></dl>
+
+<dl><dt><a name="Task-getChunk"><strong>getChunk</strong></a>(self, chunkId)</dt><dd><tt>Возвращает&nbsp;кусочек&nbsp;с&nbsp;заданым&nbsp;ID</tt></dd></dl>
+
+<dl><dt><a name="Task-getChunksResult"><strong>getChunksResult</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;список&nbsp;результатов&nbsp;каждого&nbsp;кусочка</tt></dd></dl>
+
+<dl><dt><a name="Task-getChunksState"><strong>getChunksState</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;список&nbsp;состояний&nbsp;каждого&nbsp;кусочка<br>
+0&nbsp;-&nbsp;не&nbsp;выполнен&nbsp;и&nbsp;не&nbsp;в&nbsp;процессе<br>
+1&nbsp;-&nbsp;в&nbsp;процессе<br>
+2&nbsp;-&nbsp;выполнен</tt></dd></dl>
+
+<dl><dt><a name="Task-getIntervals"><strong>getIntervals</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;интервалы&nbsp;вычисления</tt></dd></dl>
+
+<dl><dt><a name="Task-getTaskId"><strong>getTaskId</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;ID&nbsp;задания</tt></dd></dl>
+
+<dl><dt><a name="Task-getTotalTime"><strong>getTotalTime</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;время&nbsp;затраченное&nbsp;на&nbsp;выполение&nbsp;задания</tt></dd></dl>
+
+<dl><dt><a name="Task-isComplete"><strong>isComplete</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;состояние&nbsp;законченности&nbsp;вычисления&nbsp;задания&nbsp;(законченности&nbsp;или&nbsp;нет)</tt></dd></dl>
+
+<dl><dt><a name="Task-setInProgress"><strong>setInProgress</strong></a>(self, chunkId, flag)</dt><dd><tt>Устанавливает&nbsp;состояния&nbsp;вычисления&nbsp;кусочка&nbsp;с&nbsp;заданым&nbsp;ID</tt></dd></dl>
+
+<dl><dt><a name="Task-setResult"><strong>setResult</strong></a>(self, chunkId, value)</dt><dd><tt>Устанавливает&nbsp;результат&nbsp;вычисления&nbsp;кусочка&nbsp;с&nbsp;заданым&nbsp;ID</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Worker">class <strong>Worker</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Класс&nbsp;Воркер&nbsp;является&nbsp;отражением&nbsp;реального&nbsp;воркера.<br>
+Класс&nbsp;содержит&nbsp;в&nbsp;себе&nbsp;информацию&nbsp;про&nbsp;свою&nbsp;занятость&nbsp;и&nbsp;время&nbsp;последнего&nbsp;отклика.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Worker-__init__"><strong>__init__</strong></a>(self, workerId)</dt></dl>
+
+<dl><dt><a name="Worker-getChunkId"><strong>getChunkId</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;ID&nbsp;кусочка&nbsp;которым&nbsp;занят&nbsp;воркер</tt></dd></dl>
+
+<dl><dt><a name="Worker-getLastPing"><strong>getLastPing</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;время&nbsp;последнего&nbsp;отклика</tt></dd></dl>
+
+<dl><dt><a name="Worker-getTaskId"><strong>getTaskId</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;ID&nbsp;задания&nbsp;которым&nbsp;занят&nbsp;воркер</tt></dd></dl>
+
+<dl><dt><a name="Worker-getWorkerId"><strong>getWorkerId</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;ID&nbsp;воркера</tt></dd></dl>
+
+<dl><dt><a name="Worker-isTimeOut"><strong>isTimeOut</strong></a>(self)</dt><dd><tt>Возвращает&nbsp;True&nbsp;если&nbsp;воркер&nbsp;не&nbsp;отвечал&nbsp;слишком&nbsp;долго</tt></dd></dl>
+
+<dl><dt><a name="Worker-setChunkId"><strong>setChunkId</strong></a>(self, chunkId)</dt><dd><tt>Устанавливает&nbsp;ID&nbsp;кусочка&nbsp;которым&nbsp;будет&nbsp;занят&nbsp;воркер</tt></dd></dl>
+
+<dl><dt><a name="Worker-setTaskId"><strong>setTaskId</strong></a>(self, taskId)</dt><dd><tt>Устанавливает&nbsp;ID&nbsp;задания&nbsp;которым&nbsp;будет&nbsp;занят&nbsp;воркер</tt></dd></dl>
+
+<dl><dt><a name="Worker-updateLastPing"><strong>updateLastPing</strong></a>(self)</dt><dd><tt>Обновляет&nbsp;время&nbsp;последнего&nbsp;отклика(устанавливает&nbsp;текущее)</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>TIME_OUT</strong> = 5000</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-addTask"><strong>addTask</strong></a>(intervals)</dt><dd><tt>Создает&nbsp;новое&nbsp;задание&nbsp;с&nbsp;заданными&nbsp;интервалами&nbsp;и&nbsp;добаляет&nbsp;его&nbsp;в&nbsp;список&nbsp;всех&nbsp;заданий</tt></dd></dl>
+ <dl><dt><a name="-addWorker"><strong>addWorker</strong></a>(workerId)</dt><dd><tt>Создает&nbsp;новый&nbsp;воркер(с&nbsp;заданным&nbsp;ID)&nbsp;и&nbsp;добавляет&nbsp;его&nbsp;в&nbsp;общий&nbsp;список&nbsp;воркеров</tt></dd></dl>
+ <dl><dt><a name="-getAnyTask"><strong>getAnyTask</strong></a>()</dt><dd><tt>Возвращает&nbsp;первое&nbsp;задание&nbsp;готовое&nbsp;к&nbsp;вычислению&nbsp;на&nbsp;воркерах</tt></dd></dl>
+ <dl><dt><a name="-getTask"><strong>getTask</strong></a>(taskId)</dt><dd><tt>Возвращает&nbsp;задание&nbsp;с&nbsp;заданным&nbsp;ID,&nbsp;или&nbsp;None&nbsp;если&nbsp;такого&nbsp;задания&nbsp;нет</tt></dd></dl>
+ <dl><dt><a name="-getTaskByInput"><strong>getTaskByInput</strong></a>(intervals)</dt><dd><tt>Возвращает&nbsp;задание&nbsp;по&nbsp;заданным&nbsp;интервалам,&nbsp;или&nbsp;None&nbsp;если&nbsp;такого&nbsp;задания&nbsp;нет</tt></dd></dl>
+ <dl><dt><a name="-getTaskList"><strong>getTaskList</strong></a>()</dt><dd><tt>Возвращает&nbsp;список&nbsp;заданий</tt></dd></dl>
+ <dl><dt><a name="-getWorker"><strong>getWorker</strong></a>(workerId)</dt><dd><tt>Возвращает&nbsp;воркер&nbsp;с&nbsp;заданным&nbsp;ID</tt></dd></dl>
+ <dl><dt><a name="-getWorkerList"><strong>getWorkerList</strong></a>()</dt><dd><tt>Возвращает&nbsp;список&nbsp;воркеров</tt></dd></dl>
+ <dl><dt><a name="-removeLostWorkers"><strong>removeLostWorkers</strong></a>()</dt><dd><tt>Удаляет&nbsp;из&nbsp;обшего&nbsp;списка&nbsp;воркеры&nbsp;которые&nbsp;превысили&nbsp;интервал&nbsp;ожидания.<br>
+Если&nbsp;воркер&nbsp;находился&nbsp;в&nbsp;процессе&nbsp;выполнения&nbsp;то&nbsp;кусочек&nbsp;который&nbsp;он&nbsp;выполнял&nbsp;возвращает&nbsp;в&nbsp;состояние&nbsp;ожидания.</tt></dd></dl>
+ <dl><dt><a name="-removeWorker"><strong>removeWorker</strong></a>(worker)</dt><dd><tt>Удаляет&nbsp;конкретный&nbsp;воркер&nbsp;из&nbsp;общего&nbsp;списка&nbsp;воркеров</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>taskList</strong> = []<br>
+<strong>workerList</strong> = []</td></tr></table>
+</body></html>

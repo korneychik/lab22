@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Lab2</title>
+    <link rel="stylesheet" href="/lab2/res/css/bootstrap.css"/>
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="/lab2/res/css/style.css"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="col-xs-12">
+        <h3>Завдання</h3>
+
+        <h3>Побудова таблиці значень визначених інтегралів заданої функції для
+            набору інтервалів з заданим кроком. Обчислення проводити методом
+            трапецій.</h3>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <h3>Інтеграл:</h3>
+                <img src="/lab2/res/img/integral.gif" class="integral"></img>
+            </div>
+            <div class="col-xs-8">
+                <h3>Таблиця результатів:</h3>
+                <table class="table table-hover">
+                    <thead>
+                    <tr class="info">
+                        <th>Результат</th>
+                        <th>a</th>
+                        <th>b</th>
+                        <th>Кроків</th>
+                    </tr>
+                    </thead>
+                    <tbody id="result">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br/>
+
+        <h3>Інтервали:</h3>
+        <buttom class="btn btn-success" id="add">Додати інтервал</buttom>
+        <buttom class="btn btn-info" id="post">Порахувати</buttom>
+        <div id="intervals">
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/lab2/res/js/jquery.min.js"></script>
+<script type="text/javascript" src="/lab2/res/js/lab2boris.js"></script>
+<script type="text/javascript" src="/lab2/res/js/main.js"></script>
+</body>
+
+</html>

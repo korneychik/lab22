@@ -1,0 +1,19 @@
+body{
+     background: url('/lab2/res/img/background.jpg');
+}
+
+.container{
+    background: white;
+    width: 960px;
+    height: auto;
+}
+
+.integral{
+    width: 100px;
+    height: auto;
+}
+
+#intervals{
+    margin-top: 20px;
+}
+
